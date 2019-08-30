@@ -1,27 +1,17 @@
 <template>
   <div id="app">
       <!-- navbar -->
-      <div class="navbar navbar-expand-lg fixed-top navbar-dark bg-primary">
-        <div class="container">
-        <router-link to="/" class="navbar-brand">Home</router-link>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarResponsive">
-          <ul class="navbar-nav">
-      
-            <li class="nav-item">
-              <router-link class="nav-link" to="/blog">Blog</router-link>
-            </li>
-            <li class="nav-item">
-            <router-link class="nav-link" to="/services">Services</router-link>
-            </li>
-            <li class="nav-item">
-             <router-link class="nav-link" to="/contact">contact</router-link>
-            </li>
-          </ul>
-        </div>
-        </div>
+      <div class="container">
+        <b-navbar>
+          <template slot="brand">
+            <b-navbar-item tag="router-link" to="/" >Home</b-navbar-item>
+          </template>
+          <template slot="start">
+              <b-navbar-item tag="router-link" to="/blog">Blog</b-navbar-item>
+              <b-navbar-item tag="router-link" to="/services">Services</b-navbar-item>
+              <b-navbar-item tag="router-link" to="/contact">contact</b-navbar-item>
+          </template>
+        </b-navbar>
       </div>
       <div class="container">
        <transition name="moveInUp">
